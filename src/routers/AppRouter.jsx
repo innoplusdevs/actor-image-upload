@@ -9,17 +9,6 @@ export const AppRouter = () => {
     <Router>
       <div>
         <div>
-          <ul>
-            <li>
-              <Link to="/upload-image">Upload Image</Link>
-            </li>
-            <li>
-              <Link to="/actor-info">Actor Info</Link>
-            </li>
-          </ul>
-        </div>
-
-        <div>
           <Switch>
             <Route
               exact
