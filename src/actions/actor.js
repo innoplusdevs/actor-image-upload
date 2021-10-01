@@ -6,3 +6,7 @@ export const setActor = (info) => ({
     ...info
   }
 });
+
+export const deleteActor = () => ({
+  type: types.deleteActor
+});

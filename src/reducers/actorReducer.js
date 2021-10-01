@@ -6,7 +6,10 @@ export const actorReducer = (state = {}, action) => {
         case types.setActor:
             return {
                 ...action.payload
-            }
+            };
+
+        case types.deleteActor:
+            return {};
 
         default:
             return state;

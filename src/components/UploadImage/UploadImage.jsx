@@ -10,7 +10,6 @@ import { actorInfoRequest } from '../../helpers/actorInfoRequest';
 import { Upload, message, Space } from 'antd';
 import { InboxOutlined } from '@ant-design/icons';
 
-
 const { Dragger } = Upload;
 
 export const UploadImage = () => {
