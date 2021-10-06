@@ -11,7 +11,9 @@ import { deleteActor } from '../../actions/actor';
 
 
 export const ActorInfo = () => {
-  const { photo, name, gender, popularity, movies } = useSelector(state => state.actor);
+  const data = useSelector(state => state.actor);
+  const { photo, name, gender, popularity, movies } = data;
+
   const history = useHistory();
 
   const dispatch = useDispatch();

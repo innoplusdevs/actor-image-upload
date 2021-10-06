@@ -20,15 +20,15 @@ export const UploadImage = () => {
     name: 'image',
     multiple: false,
     action: 'https://whois.nomada.cloud/upload',
-    accept: '.jpg, .png',
+    accept: '.jpg,.png',
 
     //manipular onChange
     async onChange(info) {
       const { status } = info.file;
+      
+      const fileType = (info.file.name).split('.').pop().toUpperCase();
 
-      const fileType = (info.file.name).split('.').pop();
-
-      if (fileType === 'png' || fileType === 'jpg') {
+      if (fileType === 'PNG' || fileType === 'JPG') {
         if (status === 'done') {
           const { error, data } = await actorInfoRequest(info.file.originFileObj);
           if (!error) {
