@@ -52,6 +52,7 @@ const actorNameRequest = async (image) => {
   }
 }
 
+
 const actorDataRequest = async (name) => {
   try {
     const { data } = await axios.get('https://api.themoviedb.org/3/search/person', {

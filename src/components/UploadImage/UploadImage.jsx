@@ -20,6 +20,7 @@ export const UploadImage = () => {
     name: 'image',
     multiple: false,
     action: 'https://whois.nomada.cloud/upload',
+    accept: '.jpg, .png',
 
     //manipular onChange
     async onChange(info) {
