@@ -25,7 +25,7 @@ export const UploadImage = () => {
     //manipular onChange
     async onChange(info) {
       const { status } = info.file;
-      
+
       const fileType = (info.file.name).split('.').pop().toUpperCase();
 
       if (fileType === 'PNG' || fileType === 'JPG') {
@@ -45,17 +45,37 @@ export const UploadImage = () => {
   };
 
   return (
-    <Space align="center" direction="vertical" style={{ width: "100%" }}>
-      <h2>¿Quién es ese actor?</h2>
-      <Dragger {...props} style={{ padding: "10px" }}>
-        <p className="ant-upload-drag-icon">
-          <InboxOutlined />
-        </p>
-        <p className="ant-upload-text">Haz click o arrastra una imagen</p>
-        <p className="ant-upload-hint">
-          Selcciona la foto de un actor famoso para conocer quién es y en qué películas ha salido
-        </p>
-      </Dragger>
-    </Space>
+    <div style={styles.container}>
+      <Space align="center" direction="vertical" style={{ width: "100%" }}>
+        <h2 style={{ color: '#fff' }}>¿Quién es ese actor?</h2>
+        <Dragger {...props} style={styles.dragger}>
+          <p className="ant-upload-drag-icon">
+            <InboxOutlined style={{ color: 'red' }} />
+          </p>
+          <p className="ant-upload-text" style={styles.text}>Haz click o arrastra una imagen</p>
+          <p className="ant-upload-hint" style={styles.text}>
+            Selcciona la foto de un actor famoso para conocer quién es y en qué películas ha salido
+          </p>
+        </Dragger>
+      </Space>
+    </div>
   );
+}
+
+
+const styles = {
+  container: {
+    minHeight: '100vh',
+    background: 'rgba(0,0,0, 0.9)',
+    color: '#fff',
+  },
+
+  dragger: {
+    padding: '10px',
+    background: 'rgba(255, 255, 255, 0.1)'
+  },
+
+  text: {
+    color: '#fff'
+  }
 }
