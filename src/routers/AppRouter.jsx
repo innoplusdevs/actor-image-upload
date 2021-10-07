@@ -1,4 +1,4 @@
-import { HashRouter as Router, Switch, Route, Redirect } from "react-router-dom";
+import { BrowserRouter as Router, Switch, Route, Redirect } from "react-router-dom";
 
 import { ActorInfo } from "../components/ActorInfo/ActorInfo";
 import { UploadImage } from "../components/UploadImage/UploadImage";
