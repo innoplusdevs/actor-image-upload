@@ -73,6 +73,7 @@ const styles = {
         margin: '0.5rem',
         borderRadius: '5px',
         boxShadow: '2px 2px 10px 2px  rgba(0, 0, 0, 0.2)',
+        cursor: 'pointer'
     }
 
 }
