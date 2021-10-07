@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { Modal, Tooltip, Image } from 'antd';
+import { Modal, Image } from 'antd';
 import { StarFilled } from '@ant-design/icons';
 
 export const MoviesInfo = ({ movies }) => {
@@ -43,15 +43,14 @@ export const MoviesInfo = ({ movies }) => {
                 {
                     <div style={{ display: 'flex', justifyContent: 'space-evenly', alignItems: 'center', flexWrap: 'wrap' }}>
                         {movies.map(({ poster_path, id, title, overview, vote_average }) => (
-                            <Tooltip title="Click for more info" key={id}>
-                                <Image
-                                    preview={false}
-                                    width={200}
-                                    src={`https://image.tmdb.org/t/p/original${poster_path}`}
-                                    onClick={() => showModal(title, overview, vote_average)}
-                                    style={styles.image}
-                                />
-                            </Tooltip>
+                            <Image
+                                key={id}
+                                preview={false}
+                                width={200}
+                                src={`https://image.tmdb.org/t/p/original${poster_path}`}
+                                onClick={() => showModal(title, overview, vote_average)}
+                                style={styles.image}
+                            />
                         ))}
                     </div>
                 }
