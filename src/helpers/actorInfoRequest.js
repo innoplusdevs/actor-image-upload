@@ -1,11 +1,10 @@
 
 import axios from 'axios';
-// import queryString from "query-string";
 
 import { message } from 'antd';
 
 export const actorInfoRequest = async (img) => {
-  const actorName = await actorNameRequest(img);
+  const actorName = typeof(img) === 'string' ? img : await actorNameRequest(img);
 
   if (actorName) {
     const { profile_path, name, gender, popularity, known_for } = await actorDataRequest(actorName);
@@ -53,7 +52,7 @@ const actorNameRequest = async (image) => {
 }
 
 
-const actorDataRequest = async (name) => {
+export const actorDataRequest = async (name) => {
   try {
     const { data } = await axios.get('https://api.themoviedb.org/3/search/person', {
       params: {

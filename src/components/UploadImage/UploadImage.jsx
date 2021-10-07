@@ -33,7 +33,7 @@ export const UploadImage = () => {
           const { error, data } = await actorInfoRequest(info.file.originFileObj);
           if (!error) {
             dispatch(setActor(data));
-            history.push('/actor-info');
+            history.push(`/actor-info?q=${data.name}`);
           }
         } else if (status === 'error') {
           message.error(`${info.file.name} la carga del archivo falló.`);
