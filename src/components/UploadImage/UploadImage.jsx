@@ -52,9 +52,9 @@ export const UploadImage = () => {
           <p className="ant-upload-drag-icon">
             <InboxOutlined style={{ color: 'red' }} />
           </p>
-          <p className="ant-upload-text" style={styles.text}>Haz click o arrastra una imagen</p>
+          <p className="ant-upload-text" style={styles.text}>Haz click o arrastra una imagen de un actor</p>
           <p className="ant-upload-hint" style={styles.text}>
-            Selcciona la foto de un actor famoso para conocer quién es y en qué películas ha salido
+            Selcciona la foto de un actor famoso para conocer quién es y en qué películas ha trabajado
           </p>
         </Dragger>
       </Space>
@@ -65,9 +65,7 @@ export const UploadImage = () => {
 
 const styles = {
   container: {
-    minHeight: '100vh',
-    background: 'rgba(0,0,0, 0.9)',
-    color: '#fff',
+    marginBottom: '2rem'
   },
 
   dragger: {

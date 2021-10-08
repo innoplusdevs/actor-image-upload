@@ -1,7 +1,7 @@
 import { BrowserRouter as Router, Switch, Route, Redirect } from "react-router-dom";
 
 import { ActorInfo } from "../components/ActorInfo/ActorInfo";
-import { UploadImage } from "../components/UploadImage/UploadImage";
+import { Home } from "../components/Home/Home";
 
 export const AppRouter = () => {
 
@@ -12,8 +12,8 @@ export const AppRouter = () => {
           <Switch>
             <Route
               exact
-              path='/upload-image'
-              component={UploadImage}
+              path='/home'
+              component={Home}
             />
 
             <Route
@@ -21,7 +21,7 @@ export const AppRouter = () => {
               component={ActorInfo}
             />
 
-            <Redirect to='/upload-image' />
+            <Redirect to='/home' />
           </Switch>
         </div>
       </div>
