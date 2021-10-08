@@ -68,7 +68,7 @@ export const ActorInfo = () => {
               <Tag color="gray">
                 <p style={{ fontSize: '1.2em',color: '#fff', margin: '0' }}>{gender}</p>
               </Tag>
-              <p style={{ color: '#fff' }}>Popularidad: {popularity}/100</p>
+              <p style={{ color: '#fff' }}>Popularidad: {popularity}</p>
             </Space>
             <Divider type="vertical" style={{ height: "auto" }} />
             <MoviesInfo movies={movies} />
