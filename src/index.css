@@ -1,5 +1,7 @@
 @import "~antd/dist/antd.css";
+
 @import "./styles/TopPopular.css";
+@import "./styles/ActorInfo.css";
 
 @font-face {
   font-family: "Nunito-Regular";

@@ -47,7 +47,7 @@ export const ActorInfo = () => {
   return (
     <div style={styles.container}>
       {!data.name ?
-        <div style={{ fontSize: "2em", height: "100vh", display: "flex", justifyContent: "center", alignItems: "center" }}>
+        <div style={{ color: '#fff', fontSize: "2em", height: "100vh", display: "flex", justifyContent: "center", alignItems: "center" }}>
           Loading...
         </div>
         :
@@ -66,7 +66,7 @@ export const ActorInfo = () => {
               }
               <h2 style={{ color: '#fff' }}>{name}</h2>
               <Tag color="gray">
-                <p style={{ fontSize: '1.2em',color: '#fff', margin: '0' }}>{gender}</p>
+                <p style={{ fontSize: '1.2em', color: '#fff', margin: '0' }}>{gender}</p>
               </Tag>
               <p style={{ color: '#fff' }}>Popularidad: {popularity}</p>
             </Space>
@@ -88,4 +88,4 @@ const styles = {
   avatar: {
     boxShadow: '2px 2px 10px 2px  rgba(0, 0, 0, 0.2)',
   }
-} 
+}

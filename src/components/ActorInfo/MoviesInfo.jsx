@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { Modal, Image } from 'antd';
-import { StarFilled } from '@ant-design/icons';
+import { CloseOutlined, StarFilled } from '@ant-design/icons';
 
 export const MoviesInfo = ({ movies }) => {
     const [isModalVisible, setIsModalVisible] = useState({ open: false, data: {} });
@@ -32,10 +32,15 @@ export const MoviesInfo = ({ movies }) => {
     return (
         <>
             <Modal
-                style={{ borderRadius: '10px' }}
+                wrapClassName='ModalWrapper'
+                style={{ borderRadius: '10px', background: 'rgba(0, 0, 0, 0.8)', padding: '0' }}
+                bodyStyle={{ backgroundColor: 'rgba(0, 0, 0, 0.8)', color: 'white' }}
+                closeIcon={<CloseOutlined style={{ color: "#fff" }} />}
                 title={title}
+                okButtonProps={{ type: 'danger' }}
                 visible={isModalVisible.open}
-                onOk={handleOk} onCancel={handleCancel}>
+                onOk={handleOk} onCancel={handleCancel}
+            >
                 <p style={{ fontWeight: '600' }}>Sinopsis:</p>
                 <p>{isModalVisible.data.overview}</p>
             </Modal>
@@ -62,6 +67,7 @@ export const MoviesInfo = ({ movies }) => {
 
 const styles = {
     title: {
+        color: '#fff',
         display: 'flex',
         justifyContent: 'space-between',
         alignItems: 'center',
