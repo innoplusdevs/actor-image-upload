@@ -36,7 +36,7 @@ export const MoviesInfo = ({ movies }) => {
                 title={title}
                 visible={isModalVisible.open}
                 onOk={handleOk} onCancel={handleCancel}>
-                <p style={{ sfontWeight: '600' }}>Sinopsis:</p>
+                <p style={{ fontWeight: '600' }}>Sinopsis:</p>
                 <p>{isModalVisible.data.overview}</p>
             </Modal>
             <div>

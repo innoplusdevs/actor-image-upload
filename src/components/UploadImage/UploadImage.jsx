@@ -65,7 +65,7 @@ export const UploadImage = () => {
 
 const styles = {
   container: {
-    marginBottom: '2rem'
+    marginBottom: '1rem'
   },
 
   dragger: {

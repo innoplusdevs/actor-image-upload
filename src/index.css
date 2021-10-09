@@ -1,4 +1,5 @@
 @import "~antd/dist/antd.css";
+@import "./styles/TopPopular.css";
 
 @font-face {
   font-family: "Nunito-Regular";
